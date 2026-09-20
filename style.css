@@ -995,48 +995,39 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
-   Галерея
+   Masonry-галерея
    ============================================================ */
-.gallery {
+.masonry {
   margin-top: var(--space-8);
-  column-count: 2;
-  column-gap: var(--space-6);
+  columns: 3;
+  column-gap: var(--space-4);
 }
 
-.gallery figure {
+.masonry__item {
   break-inside: avoid;
-  margin: 0 0 var(--space-6);
+  margin-bottom: var(--space-4);
   border-radius: var(--radius-card);
   overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--hairline);
+  will-change: transform, opacity, filter;
+  opacity: 0;
+  filter: blur(10px);
 }
 
-.gallery img {
+.masonry__item img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.gallery figcaption {
-  padding: var(--space-3) var(--space-4);
-  font-size: var(--text-sm);
-  color: var(--muted);
-}
-
-.gallery figure.is-empty img { display: none; }
-
-.gallery figure.is-empty::after {
-  content: "Фотография появится здесь";
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 3;
-  padding: var(--space-8);
-  text-align: center;
-  font-size: var(--text-sm);
-  color: var(--muted);
-  border: 1px dashed var(--hairline-strong);
   border-radius: var(--radius-card);
+  transition: transform 0.4s var(--ease);
+}
+
+.masonry__item:hover img {
+  transform: scale(1.03);
+}
+
+.masonry__item.is-in {
+  opacity: 1;
+  filter: blur(0);
 }
 
 .mono, code {
@@ -1134,6 +1125,10 @@ a:active { color: #7A2F13; }
     position: static;
   }
 
+  .masonry {
+    columns: 2;
+  }
+
   .toc-list {
     display: flex;
     flex-wrap: wrap;
@@ -1212,8 +1207,8 @@ a:active { color: #7A2F13; }
     column-gap: 0;
   }
 
-  .gallery {
-    column-count: 1;
+  .masonry {
+    columns: 1;
   }
 }
 

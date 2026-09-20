@@ -562,35 +562,14 @@
           <p class="kicker">Фото</p>
           <h2>Фотографии</h2>
         </header>
-        <div class="gallery" data-reveal>
-          <figure data-reveal>
-            <img src="photos/portrait-main.jpg" alt="Портрет Виктора Слипенчука" width="960" height="1445" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>Портрет Виктора Слипенчука</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/interview.jpg" alt="Виктор Слипенчук на интервью" width="960" height="540" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>На интервью</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/autographs.jpg" alt="Виктор Слипенчук раздаёт автографы" width="640" height="480" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>Раздача автографов</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/book.jpg" alt="Виктор Слипенчук с книгой в руках" width="250" height="343" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>С книгой в руках</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/book-2.jpg" alt="Виктор Слипенчук с книгой в руках, другой снимок" width="364" height="549" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>С книгой в руках, ещё один снимок</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/bw.jpg" alt="Чёрно-белый портрет Виктора Слипенчука" width="200" height="290" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>Чёрно-белый портрет</figcaption>
-          </figure>
-          <figure data-reveal>
-            <img src="photos/bw-2.jpg" alt="Ещё один чёрно-белый портрет Виктора Слипенчука" width="200" height="341" onerror="this.closest('figure').classList.add('is-empty')" loading="lazy">
-            <figcaption>Чёрно-белый портрет</figcaption>
-          </figure>
+        <div class="masonry" data-masonry>
+          <div class="masonry__item"><img src="photos/portrait-main.jpg" alt="Портрет Виктора Слипенчука" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/interview.jpg" alt="На интервью" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/autographs.jpg" alt="Раздача автографов" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/book.jpg" alt="С книгой в руках" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/book-2.jpg" alt="С книгой в руках, ещё один снимок" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/bw.jpg" alt="Чёрно-белый портрет" loading="lazy"></div>
+          <div class="masonry__item"><img src="photos/bw-2.jpg" alt="Ещё один чёрно-белый портрет" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -603,6 +582,7 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
