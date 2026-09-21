@@ -922,6 +922,42 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 
+/* Вехи истории: структурированный список */
+.library__milestones {
+  margin-top: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+}
+
+.milestones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.milestones li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--hairline);
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+
+.milestones li:last-child {
+  border-bottom: none;
+}
+
+.milestones span {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--accent);
+  min-width: 3.5ch;
+}
+
 /* Визиты: минималистичный таймлайн */
 .library__visits {
   margin-top: var(--space-2);
