@@ -8,7 +8,7 @@
   <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,34 +25,45 @@
         <a href="#world">Переводы</a>
         <a href="#awards">Награды</a>
         <a href="#library">Библиотека</a>
-        <a href="#gallery">Фото</a>
       </nav>
     </div>
   </header>
 
   <main id="content">
-    <section class="hero">
-      <div class="container hero__inner">
+    <header class="page-head">
+      <div class="container">
+        <div class="page-head__emblem" aria-hidden="true"><span class="page-head__letter page-head__letter--b">B</span><span class="page-head__letter page-head__letter--c">C</span></div>
         <p class="kicker">Русский поэт и прозаик</p>
-        <h1>Виктор <em>Слипенчук</em></h1>
-        <p class="hero__note">Жизнь между морем, Алтаем и словом</p>
-        <p class="hero__lead">О том, что станет писателем, он знал с детства. Геологоразведчик, рабочий, зоотехник, моряк, рыбовод, строитель, журналист — он сознательно искал опыт, который однажды станет строками. Член Союза писателей СССР с 1982 года, автор романов «Зинзивер» и «Звёздный Спас», книги которого издавались в Китае, Франции, Японии, Сербии, Монголии и Вьетнаме.</p>
-        <p class="hero__quote">«Я с детства знал, что стану писателем»</p>
-        <dl class="hero__facts">
-          <div class="fact">
-            <dt>Родился</dt>
-            <dd>22 сентября 1941, Черниговка</dd>
-          </div>
-          <div class="fact">
-            <dt>Союз писателей</dt>
-            <dd>с 1982 года</dd>
-          </div>
-          <div class="fact">
-            <dt>Первая публикация</dt>
-            <dd>в 14 лет, «Черниговский колхозник»</dd>
-          </div>
-        </dl>
-        <a class="btn" href="#bio">Читать историю жизни</a>
+        <h1>Виктор<br><span class="page-head__surname">Слипенчук</span></h1>
+        <p class="page-head__intro">Жизнь между морем, Алтаем и словом.</p>
+      </div>
+    </header>
+
+    <section id="listen" class="listen" aria-label="Аудиозаписи">
+      <div class="container listen__inner">
+        <p class="kicker listen__label">Читает автор</p>
+        <ul class="listen__list">
+          <li class="listen__item" data-reveal>
+            <button class="listen__play" type="button" aria-label="Слушать запись: Белая птица">
+              <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            </button>
+            <div class="listen__meta">
+              <span class="listen__title">Белая птица</span>
+              <span class="listen__len">0:43</span>
+            </div>
+            <audio class="listen__audio" preload="none" src="media/Белая птица.m4a"></audio>
+          </li>
+          <li class="listen__item" data-reveal>
+            <button class="listen__play" type="button" aria-label="Слушать запись: Черниговке">
+              <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            </button>
+            <div class="listen__meta">
+              <span class="listen__title">Черниговке</span>
+              <span class="listen__len">0:54</span>
+            </div>
+            <audio class="listen__audio" preload="none" src="media/Черниговке.mp3"></audio>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -103,6 +114,42 @@
                   <p class="aside__label">А знаете ли вы, что</p>
                   <p>Мальчик прочитал всю сельскую библиотеку, а за любимым романом «Земля Санникова» Владимира Обручева охотился по всему селу, разыскивая читателей, не вернувших книгу в срок. Здесь же родилась и загаданная мечта: чтобы районную библиотеку в Черниговке когда-нибудь назвали его именем.</p>
                 </aside>
+                <div class="chapter__gallery" data-reveal>
+                  <div class="carousel" data-carousel>
+                    <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+                    </button>
+                    <div class="carousel__viewport" data-carousel-viewport>
+                      <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo13.jpg" alt="Трифон Аксентьевич и Наталья Антоновна Слипенчук. Село Черниговка, 1947 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1947</span>
+                            <span class="carousel__text">Родители — Трифон Аксентьевич и Наталья Антоновна. с. Черниговка</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo15.jpg" alt="Трифон Аксентьевич и Наталья Антоновна с детьми Виктором и Ларисой. Село Черниговка, 1952 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1952</span>
+                            <span class="carousel__text">Трифон Аксентьевич и Наталья Антоновна с детьми — Виктором и Ларисой. с. Черниговка</span>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Следующее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="carousel__bar">
+                    <div class="carousel__dots" data-carousel-dots></div>
+                    <p class="carousel__counter"><span data-carousel-current>1</span>&nbsp;/&nbsp;<span data-carousel-total>2</span></p>
+                  </div>
+                </div>
               </div>
               <footer class="chapter__foot">
                 <a class="chapter__next" href="#ch2">Следующая глава <span aria-hidden="true">&rarr;</span> Дорога к морю</a>
@@ -130,6 +177,42 @@
                   <p class="aside__label">Слово писателю</p>
                   <p>«Перед армией был приглашён в Барнаул на краевой семинар молодых литераторов — в секцию поэзии. Руководил секцией московский поэт Марк Соболь. Ему мои произведения понравились, и он предложил подобрать стихи для первой книжки. Я сказал, что ухожу в армию, уже повестка на руках. А уж вторая — должна быть по-настоящему сильной».</p>
                 </aside>
+                <div class="chapter__gallery" data-reveal>
+                  <div class="carousel" data-carousel>
+                    <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+                    </button>
+                    <div class="carousel__viewport" data-carousel-viewport>
+                      <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo17.jpg" alt="Виктор Слипенчук с женой Галиной и сыном Мишей, 1960 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1960</span>
+                            <span class="carousel__text">Виктор Слипенчук с женой Галиной и сыном Мишей</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo10.jpg" alt="Виктор Слипенчук с женой Галиной. Омск, 1964 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1964</span>
+                            <span class="carousel__text">Виктор Слипенчук с женой Галиной. г. Омск</span>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Следующее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="carousel__bar">
+                    <div class="carousel__dots" data-carousel-dots></div>
+                    <p class="carousel__counter"><span data-carousel-current>1</span>&nbsp;/&nbsp;<span data-carousel-total>2</span></p>
+                  </div>
+                </div>
               </div>
               <footer class="chapter__foot">
                 <a class="chapter__prev" href="#ch1"><span aria-hidden="true">&larr;</span> Предыдущая</a>
@@ -154,6 +237,60 @@
                 </aside>
                 <p>После армии Слипенчук вернулся на Алтай и работал зоотехником в Рубцовском районе. В 1966 году он участвовал в совещании молодых писателей Урала и Сибири в Кемерово и в семинаре Ярослава Смелякова. В 1967 году его перевели старшим зоотехником по овцеводству на Краевую госплемстанцию, и вся семья переехала в Барнаул.</p>
                 <p>В 1968 году вместе с Василием Скрягиным он выпустил первую книгу «Бараны-производители Алтайского края», которую высоко оценил академик Дмитрий Беляев. Он мечтал стать журналистом — и его заметили на одном из выступлений.</p>
+                <div class="chapter__gallery" data-reveal>
+                  <div class="carousel" data-carousel>
+                    <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+                    </button>
+                    <div class="carousel__viewport" data-carousel-viewport>
+                      <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo14.jpg" alt="Виктор Слипенчук на службе в армии, 1964 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1964</span>
+                            <span class="carousel__text">Служба в армии</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo8.jpg" alt="Выступление Виктора Слипенчука в Алтайском политехническом институте. День поэзии, 1966 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1966</span>
+                            <span class="carousel__text">Выступление Виктора Слипенчука. Алтайский политехнический институт. День поэзии</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo12.jpg" alt="Конкурс стригалей на Курьинском овцеплемзаводе, 1966 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1966</span>
+                            <span class="carousel__text">Конкурс стригалей. Курьинский овцеплемзавод</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo18.jpg" alt="Рубцовское телевидение, Алтайский край, 1967 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1967</span>
+                            <span class="carousel__text">Рубцовское телевидение. Алтайский край</span>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Следующее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="carousel__bar">
+                    <div class="carousel__dots" data-carousel-dots></div>
+                    <p class="carousel__counter"><span data-carousel-current>1</span>&nbsp;/&nbsp;<span data-carousel-total>4</span></p>
+                  </div>
+                </div>
               </div>
               <footer class="chapter__foot">
                 <a class="chapter__prev" href="#ch2"><span aria-hidden="true">&larr;</span> Предыдущая</a>
@@ -178,6 +315,42 @@
                   <p>Четыре года он ловил рыбу у берегов Америки и Канады, побывал на Гавайях и в Японии. Письма и радиограммы с портами заходов в экзотические города летели домой — и сын Миша вычерчивал путь отцовских путешествий по карте. Морские произведения собраны в книге «Просверк клинка» — документальной прозе и стихах.</p>
                 </aside>
                 <p>В 1974 году он решил попрощаться с морем — по той же причине, что и с прежними профессиями. Стал опасаться, что становится профессиональным моряком. А он хотел стать профессиональным писателем.</p>
+                <div class="chapter__gallery" data-reveal>
+                  <div class="carousel" data-carousel>
+                    <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+                    </button>
+                    <div class="carousel__viewport" data-carousel-viewport>
+                      <div class="carousel__track" data-carousel-track>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo16.jpg" alt="Барнаульское телевидение, Алтайский край, 1969 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1969</span>
+                            <span class="carousel__text">Барнаульское телевидение. Алтайский край</span>
+                          </figcaption>
+                        </figure>
+                        <figure class="carousel__slide" data-carousel-slide>
+                          <div class="carousel__media">
+                            <img src="photos/photo11.jpg" alt="Матросы палубы Лев Камолов и Виктор Слипенчук на БМРТ «50 лет ВЛКСМ». Ванкуверо-Орегонская банка, 1971 год" loading="lazy" decoding="async">
+                          </div>
+                          <figcaption class="carousel__caption">
+                            <span class="carousel__num">1971</span>
+                            <span class="carousel__text">Ванкуверо-Орегонская банка. Матросы палубы — Лев Камолов и Виктор Слипенчук. БМРТ «50 лет ВЛКСМ»</span>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Следующее фото">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="carousel__bar">
+                    <div class="carousel__dots" data-carousel-dots></div>
+                    <p class="carousel__counter"><span data-carousel-current>1</span>&nbsp;/&nbsp;<span data-carousel-total>2</span></p>
+                  </div>
+                </div>
               </div>
               <footer class="chapter__foot">
                 <a class="chapter__prev" href="#ch3"><span aria-hidden="true">&larr;</span> Предыдущая</a>
@@ -509,11 +682,12 @@
         </header>
         <div class="library" data-reveal>
           <div class="library__story">
-            <p>Детская мечта Виктора Слипенчука — чтобы библиотеку в родной Черниговке назвали его именем — сбылась 19 сентября 2007 года</p>
+            <p>В 2007 году Центральной библиотеке села Черниговка присвоили имя Виктора Трифоновича Слипенчука — событие по тем временам уникальное. В стране ещё не было практики называть библиотеки в честь здравствующих писателей, которые продолжают активно творить и публиковаться.</p>
+            <p>Во многом это стало возможным благодаря активной позиции местной жительницы — Зои Ивановны Казак. Всё началось с письма самого писателя. В нём Виктор Слипенчук признался, что ещё в пятом классе твёрдо решил стать писателем и тогда же загадал мечту — чтобы в родной Черниговке районную библиотеку назвали в его честь. Зоя Ивановна взяла это письмо и обратилась с ним к главе поселения В. В. Вовку. На её вопрос, может ли сбыться эта детская мечта, Вовк коротко ответил:</p>
             <blockquote class="quote">
-              <p>Я прочёл в ней почти все книги.</p>
+              <p>А почему бы и нет?</p>
             </blockquote>
-            <p>Писатель не раз приезжал в Черниговку — в 2001, 2007, 2009, 2010 и 2016 годах, а в 2021-м здесь состоялась его творческая встреча с читателями.</p>
+            <p>Этот простой ответ стал отправной точкой. Сотрудники библиотеки собрали подписи жителей, вопрос вынесли на обсуждение в поселенческое заксобрание, и 19 сентября 2007 года Муниципальный комитет Черниговского сельского поселения официально закрепил решение — было принято решение №62.</p>
           </div>
           <aside class="library__card" data-reveal>
             <p class="library__card-label">Справка</p>
@@ -554,25 +728,22 @@
         </div>
       </div>
     </section>
-
-    <section id="gallery" class="section">
-      <div class="container">
-        <header class="section__head" data-reveal>
-          <p class="kicker">Фото</p>
-          <h2>Фотографии</h2>
-        </header>
-        <div class="masonry" data-masonry>
-          <div class="masonry__item"><img src="photos/portrait-main.jpg" alt="Портрет Виктора Слипенчука" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/interview.jpg" alt="На интервью" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/autographs.jpg" alt="Раздача автографов" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/book.jpg" alt="С книгой в руках" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/book-2.jpg" alt="С книгой в руках, ещё один снимок" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/bw.jpg" alt="Чёрно-белый портрет" loading="lazy"></div>
-          <div class="masonry__item"><img src="photos/bw-2.jpg" alt="Ещё один чёрно-белый портрет" loading="lazy"></div>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Просмотр фотографий" aria-hidden="true">
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Закрыть">×</button>
+    <div class="lightbox__frame" data-lightbox-frame>
+      <picture class="lightbox__picture" data-lightbox-picture></picture>
+    </div>
+    <button class="lightbox__arrow lightbox__arrow--prev" type="button" data-lightbox-prev aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="lightbox__arrow lightbox__arrow--next" type="button" data-lightbox-next aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <p class="lightbox__counter"><span data-lightbox-current>1</span>&nbsp;/&nbsp;<span data-lightbox-total>2</span></p>
+  </div>
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -581,7 +752,6 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
