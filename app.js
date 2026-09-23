@@ -43,6 +43,58 @@
 
 initListenPlayer();
 
+function initEmblemClamp() {
+  var emblem = document.querySelector(".page-head__emblem");
+  var head = document.querySelector(".page-head");
+  var band = document.querySelector(".listen");
+  if (!emblem || !head || !band) return;
+
+  function glyphGapPx() {
+    try {
+      var fs = parseFloat(window.getComputedStyle(emblem).fontSize) || 160;
+      var c = document.createElement("canvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "400 " + fs + "px Sacramento, cursive, sans-serif";
+      var m = ctx.measureText("BC");
+      if (typeof m.actualBoundingBoxDescent !== "number") return null;
+      var emDescent = m.emHeightDescent || fs * 0.2;
+      var ink = m.actualBoundingBoxDescent;
+      var gap = emDescent - ink;
+      return gap > 0 ? gap : 0;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function clamp() {
+    var b = band.getBoundingClientRect();
+    var ph = head.getBoundingClientRect();
+    var border = parseFloat(window.getComputedStyle(head).borderBottomWidth) || 0;
+    var contentBottom = ph.bottom - border;
+
+    var gap = glyphGapPx();
+    if (gap === null) return;
+
+    emblem.style.top = "auto";
+    emblem.style.bottom = (contentBottom - b.bottom - gap) + "px";
+  }
+
+  if (document.fonts && document.fonts.ready) {
+    clamp();
+    document.fonts.ready.then(function () {
+      clamp();
+      window.addEventListener("load", clamp);
+      window.addEventListener("resize", clamp);
+    });
+  } else {
+    clamp();
+    window.addEventListener("load", clamp);
+    window.addEventListener("resize", clamp);
+  }
+}
+
+initEmblemClamp();
+
 function initListenPlayer() {
   var items = Array.prototype.slice.call(document.querySelectorAll(".listen__item"));
   if (!items.length) return;

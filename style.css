@@ -193,6 +193,8 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
   border-bottom: 1px solid var(--hairline);
   overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .page-head .container {
@@ -203,13 +205,14 @@ img { max-width: 100%; display: block; }
 
 .page-head__emblem {
   position: absolute;
-  right: -0.02em;
-  top: 52%;
-  transform: translateY(-52%);
+right: calc((100% - min(100%, var(--container))) / 2 - 0.02em);
+  top: auto;
+  bottom: -0.5em;
   z-index: 0;
   font-size: clamp(10rem, 28vw, 24rem);
   letter-spacing: -0.16em;
   line-height: 1;
+  transform: none;
   user-select: none;
   pointer-events: none;
 }
@@ -266,7 +269,11 @@ img { max-width: 100%; display: block; }
    Аудиополоса «Читает автор»
    ============================================================ */
 .listen {
-  background: var(--paper-soft);
+  position: relative;
+  z-index: 1;
+  background: rgba(244, 239, 230, 0.18);
+  -webkit-backdrop-filter: blur(5px) saturate(1.05);
+  backdrop-filter: blur(5px) saturate(1.05);
   border-bottom: 1px solid var(--hairline);
   padding-block: var(--space-8);
 }
@@ -1562,7 +1569,7 @@ a:active { color: #7A2F13; }
   }
   .page-head { min-height: 70vh; min-height: 460px; }
   .page-head h1 { font-size: clamp(2.6rem, 11vw, 4.5rem); }
-  .page-head__emblem { font-size: clamp(7rem, 30vw, 15rem); top: 60%; }
+  .page-head__emblem { font-size: clamp(7rem, 30vw, 15rem); bottom: -0.5em; top: auto; }
   .page-head .page-head__intro { font-size: var(--text-md); }
   .section__head { margin-bottom: var(--space-8); }
 
