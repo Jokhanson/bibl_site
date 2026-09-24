@@ -195,6 +195,46 @@ function initTocHighlight() {
 }
 
 initCarousels();
+initTheatreTabs();
+
+function initTheatreTabs() {
+  var root = document.querySelector("[data-theatre-tabs]");
+  if (!root) return;
+
+  var triggers = Array.prototype.slice.call(root.querySelectorAll("[data-theatre-tab]"));
+  var panels = Array.prototype.slice.call(root.querySelectorAll("[data-theatre-panel]"));
+  if (!triggers.length || !panels.length) return;
+
+  function select(id) {
+    triggers.forEach(function (btn) {
+      var on = btn.getAttribute("aria-controls") === id;
+      btn.setAttribute("aria-selected", on ? "true" : "false");
+      btn.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(function (panel) {
+      panel.hidden = panel.id !== id;
+    });
+  }
+
+  triggers.forEach(function (btn, i) {
+    btn.addEventListener("click", function () {
+      select(btn.getAttribute("aria-controls"));
+    });
+
+    btn.addEventListener("keydown", function (e) {
+      var next = null;
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") next = triggers[(i + 1) % triggers.length];
+      else if (e.key === "ArrowUp" || e.key === "ArrowLeft") next = triggers[(i - 1 + triggers.length) % triggers.length];
+      else if (e.key === "Home") next = triggers[0];
+      else if (e.key === "End") next = triggers[triggers.length - 1];
+      if (next) {
+        e.preventDefault();
+        select(next.getAttribute("aria-controls"));
+        next.focus();
+      }
+    });
+  });
+}
 
 function initCarousels() {
   var roots = Array.prototype.slice.call(document.querySelectorAll("[data-carousel]"));

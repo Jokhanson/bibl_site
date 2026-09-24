@@ -567,22 +567,56 @@
           <p class="kicker">Сцена, эфир и экран</p>
           <h2>Театр, радио и кино</h2>
         </header>
-        <div class="theatre" data-reveal>
-          <div class="theatre__col">
-            <h3>Театр</h3>
-            <p>По роману «Зинзивер» Театр Наций в Москве поставил спектакль «Роман без ремарок» режиссёра Геннадия Шапошникова. Постановка с успехом шла многие годы, а в 2006 году вошла в программу VIII фестиваля русских театров стран постсоветского пространства «Встречи в России».</p>
-            <p>Первоосновой спектакля стал роман, который уже переводили на английский, французский и японский языки, а переводчица Клавдия Мельник ставила его в один ряд с «Мастером и Маргаритой».</p>
+        <div class="theatre" data-reveal data-theatre-tabs>
+          <div class="theatre-nav" role="tablist" aria-label="Театр, радио и кино">
+            <button class="theatre-tab" type="button" role="tab" id="tab-theatre" aria-controls="panel-theatre" aria-selected="true" data-theatre-tab>
+              <span class="theatre-tab__text">
+                <span class="theatre-tab__title">Театр</span>
+                <span class="theatre-tab__meta">&laquo;Роман без ремарок&raquo;, Театр Наций</span>
+              </span>
+              <svg class="theatre-tab__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <button class="theatre-tab" type="button" role="tab" id="tab-radio" aria-controls="panel-radio" aria-selected="false" tabindex="-1" data-theatre-tab>
+              <span class="theatre-tab__text">
+                <span class="theatre-tab__title">Радио</span>
+                <span class="theatre-tab__meta">Постановки на Радио России, 2003&ndash;2004</span>
+              </span>
+              <svg class="theatre-tab__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <button class="theatre-tab" type="button" role="tab" id="tab-film" aria-controls="panel-film" aria-selected="false" tabindex="-1" data-theatre-tab>
+              <span class="theatre-tab__text">
+                <span class="theatre-tab__title">Кино</span>
+                <span class="theatre-tab__meta">&laquo;Чингис-Хан&raquo;, первый ИИ-фильм</span>
+              </span>
+              <svg class="theatre-tab__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
-          <div class="theatre__col">
-            <h3>Радио</h3>
-            <p>Поэмы «Тринадцатый подвиг Геракла», «Чингис-Хан», «Путешествие в Пустое место» и «Дети двойной звезды» звучали в радиопостановках, которые выходили на Радио России в 2003 и 2004 годах. Тексты читал заслуженный артист России Владимир Левашёв.</p>
-            <p>Поэмы читались в эфире: «Чингис-Хан» начинался в солдатской казарме и на стройках молодости, а спустя десятилетия звучал на Радио России.</p>
-          </div>
-          <div class="theatre__col">
-            <h3>Кино и телевидение</h3>
-            <p>26 июня 2025 года в широкий российский прокат вышел первый в мире полнометражный художественный фильм, созданный при участии ИИ, — «Чингис-Хан». Картина снята студией «Новое время» при участии Zephyr Neyro.</p>
-            <p>Первоосновой фильма стала поэма Виктора Слипенчука, написанная в 1964 году. В своё время она произвела настоящую сенсацию в мире литературы: критики восхищались работой, которую провёл 23-летний автор, точной исторической составляющей и высокой художественной передачей. Некоторое время поэма считалась утраченной, но после обретения была издана и переведена на разные языки.</p>
-            <p>Генеральным продюсером фильма выступил Михаил Слипенчук — сын писателя, учёный, общественный деятель и предприниматель. Режиссёром проекта стал Кирилл Калашников.</p>
+          <div class="theatre-stage">
+            <article class="card theatre-panel" role="tabpanel" id="panel-theatre" aria-labelledby="tab-theatre" data-theatre-panel>
+              <p class="card__label">Сцена</p>
+              <h3 class="card__title">&laquo;Роман без ремарок&raquo;</h3>
+              <div class="theatre-panel__body">
+                <p>По роману «Зинзивер» Театр Наций в Москве поставил спектакль «Роман без ремарок» режиссёра Геннадия Шапошникова. Постановка с успехом шла многие годы, а в 2006 году вошла в программу VIII фестиваля русских театров стран постсоветского пространства «Встречи в России».</p>
+                <p>Первоосновой спектакля стал роман, который уже переводили на английский, французский и японский языки, а переводчица Клавдия Мельник ставила его в один ряд с «Мастером и Маргаритой».</p>
+              </div>
+            </article>
+            <article class="card theatre-panel" role="tabpanel" id="panel-radio" aria-labelledby="tab-radio" hidden data-theatre-panel>
+              <p class="card__label">Эфир</p>
+              <h3 class="card__title">Радиопостановки поэм</h3>
+              <div class="theatre-panel__body">
+                <p>Поэмы «Тринадцатый подвиг Геракла», «Чингис-Хан», «Путешествие в Пустое место» и «Дети двойной звезды» звучали в радиопостановках, которые выходили на Радио России в 2003 и 2004 годах. Тексты читал заслуженный артист России Владимир Левашёв.</p>
+                <p>Поэмы читались в эфире: «Чингис-Хан» начинался в солдатской казарме и на стройках молодости, а спустя десятилетия звучал на Радио России.</p>
+              </div>
+            </article>
+            <article class="card theatre-panel" role="tabpanel" id="panel-film" aria-labelledby="tab-film" hidden data-theatre-panel>
+              <p class="card__label">Экран</p>
+              <h3 class="card__title">&laquo;Чингис-Хан&raquo; на экране</h3>
+              <div class="theatre-panel__body">
+                <p>26 июня 2025 года в широкий российский прокат вышел первый в мире полнометражный художественный фильм, созданный при участии ИИ, — «Чингис-Хан». Картина снята студией «Новое время» при участии Zephyr Neyro.</p>
+                <p>Первоосновой фильма стала поэма Виктора Слипенчука, написанная в 1964 году. В своё время она произвела настоящую сенсацию в мире литературы: критики восхищались работой, которую провёл 23-летний автор, точной исторической составляющей и высокой художественной передачей. Некоторое время поэма считалась утраченной, но после обретения была издана и переведена на разные языки.</p>
+                <p>Генеральным продюсером фильма выступил Михаил Слипенчук — сын писателя, учёный, общественный деятель и предприниматель. Режиссёром проекта стал Кирилл Калашников.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
