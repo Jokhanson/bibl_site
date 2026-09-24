@@ -141,13 +141,17 @@ img { max-width: 100%; display: block; }
 }
 
 .brand {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-xl);
-  letter-spacing: -0.01em;
-  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.brand__icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
 }
 
 .nav {
@@ -543,6 +547,19 @@ right: calc((100% - min(100%, var(--container))) / 2 - 0.02em);
   border-left: 3px solid var(--accent);
   background: rgba(168, 68, 37, 0.05);
   border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.chapter__listen .listen__list {
+  gap: var(--space-4);
+}
+
+.chapter__listen .listen__play {
+  width: 40px;
+  height: 40px;
+}
+
+.chapter__listen .aside__label {
+  margin-bottom: var(--space-3);
 }
 
 .aside__label {
@@ -1427,6 +1444,49 @@ a:hover {
 a:active { color: #7A2F13; }
 
 /* ============================================================
+   Медиа-зона / панорама (в будущем здесь будет медиа)
+   ============================================================ */
+.pano {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: calc(150svh - 8.0625rem);
+  margin-inline: auto;
+  aspect-ratio: 3 / 2;
+  background: var(--paper-soft);
+}
+
+.pano__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pano__player {
+  position: absolute;
+  left: var(--space-6);
+  bottom: var(--space-6);
+  z-index: 1;
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid rgba(250, 247, 242, 0.55);
+  background: rgba(250, 247, 242, 0.15);
+  -webkit-backdrop-filter: blur(4px) brightness(1.18) saturate(1.35);
+  backdrop-filter: blur(4px) brightness(1.18) saturate(1.35);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 24px rgba(28, 26, 23, 0.35), inset 0 1px 0 rgba(250, 247, 242, 0.35);
+}
+
+.pano__player .listen__list {
+  gap: var(--space-4);
+}
+
+.pano__player .listen__play {
+  width: 40px;
+  height: 40px;
+}
+
+/* ============================================================
    Футер
    ============================================================ */
 .footer {
@@ -1612,6 +1672,13 @@ a:active { color: #7A2F13; }
 
   .awards {
     grid-template-columns: 1fr;
+  }
+
+  .pano__player {
+    left: var(--space-4);
+    bottom: var(--space-4);
+    right: var(--space-4);
+    padding: var(--space-3) var(--space-4);
   }
 }
 

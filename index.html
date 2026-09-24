@@ -17,7 +17,7 @@
 
   <header class="masthead">
     <div class="container masthead__inner">
-      <a class="brand" href="index.html">Слипенчук</a>
+      <a class="brand" href="index.html" aria-label="На главную"><img class="brand__icon" src="icon.png" alt="" width="32" height="32"></a>
       <nav class="nav" aria-label="Разделы страницы">
         <a href="index.html">Главная</a>
         <a href="#bio">Биография</a>
@@ -443,6 +443,21 @@
                 </aside>
                 <p>В декабре 2014 года Галина Михайловна ушла из жизни. Для Виктора Трифоновича это стало невосполнимой утратой.</p>
                 <p>Юбилей — 80 лет (2021 год) — был отмечен важным событием: в издательстве «Художественная литература» в серии «Мастера русской прозы» издали восьмитомник произведений писателя. Такое масштабное издание — достойное признание его многолетнего творческого пути.</p>
+                <div class="aside chapter__listen" data-reveal>
+                  <p class="aside__label">Читает автор</p>
+                  <ul class="listen__list">
+                    <li class="listen__item">
+                      <button class="listen__play" type="button" aria-label="Слушать запись: Белая птица">
+                        <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                      </button>
+                      <div class="listen__meta">
+                        <span class="listen__title">Белая птица</span>
+                        <span class="listen__len">0:43</span>
+                      </div>
+                      <audio class="listen__audio" preload="none" src="media/Белая птица.m4a"></audio>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <footer class="chapter__foot">
                 <a class="chapter__prev" href="#ch7"><span aria-hidden="true">&larr;</span> Предыдущая</a>
@@ -539,6 +554,7 @@
               <li><span class="work__cover" aria-hidden="true"><img src="covers/svetloe-voskresenie.jpg" alt="" width="240" height="360" loading="lazy" onerror="if(this.parentElement){this.parentElement.classList.add('cover-is-letter');}this.remove()"><span class="work__cover-letter">С</span></span><span class="works__title">&laquo;Светлое воскресение&raquo;</span><span class="works__tag">повесть в рассказах</span></li>
               <li><span class="work__cover" aria-hidden="true"><img src="covers/za-mysom-povorotnym.jpg" alt="" width="240" height="360" loading="lazy" onerror="if(this.parentElement){this.parentElement.classList.add('cover-is-letter');}this.remove()"><span class="work__cover-letter">З</span></span><span class="works__title">&laquo;За мысом поворотным&raquo;</span><span class="works__tag">дневник одного рейса</span></li>
               <li><span class="work__cover" aria-hidden="true"><img src="covers/zolotoj-korob.jpg" alt="" width="240" height="360" loading="lazy" onerror="if(this.parentElement){this.parentElement.classList.add('cover-is-letter');}this.remove()"><span class="work__cover-letter">З</span></span><span class="works__title">&laquo;Золотой короб&raquo;</span><span class="works__tag">дневник-путешествие</span></li>
+              <li><span class="work__cover" aria-hidden="true"><img src="covers/zametki.jpg" alt="" width="240" height="360" loading="lazy" onerror="if(this.parentElement){this.parentElement.classList.add('cover-is-letter');}this.remove()"><span class="work__cover-letter">З</span></span><span class="works__title">&laquo;Заметки с затонувшей Атлантиды&raquo;</span><span class="works__tag">публицистика</span></li>
             </ul>
           </div>
         </div>
@@ -702,17 +718,6 @@
                 <dd>19 сентября 2007 года</dd>
               </div>
             </dl>
-            <div class="library__milestones">
-              <p class="library__visits-label">Вехи истории</p>
-              <ol class="milestones">
-                <li><span>1925</span>Изба-читальня</li>
-                <li><span>1951</span>Детская библиотека</li>
-                <li><span>1978</span>Центральная библиотека</li>
-                <li><span>2007</span>Имя В. Т. Слипенчука</li>
-                <li><span>2025</span>«Гений места»</li>
-                <li><span>2026</span>Модельная библиотека</li>
-              </ol>
-            </div>
             <div class="library__visits">
               <p class="library__visits-label">Визиты писателя</p>
               <ol class="visits">
@@ -744,6 +749,24 @@
     </button>
     <p class="lightbox__counter"><span data-lightbox-current>1</span>&nbsp;/&nbsp;<span data-lightbox-total>2</span></p>
   </div>
+
+  <section class="pano" aria-label="Панорама">
+    <img class="pano__image" src="photos/пано.png" alt="Панорама" loading="lazy" decoding="async">
+    <div class="pano__player" data-reveal>
+      <ul class="listen__list">
+        <li class="listen__item">
+          <button class="listen__play" type="button" aria-label="Слушать запись: Черниговке">
+            <svg class="listen__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          </button>
+          <div class="listen__meta">
+            <span class="listen__title">Черниговке</span>
+            <span class="listen__len">0:54</span>
+          </div>
+          <audio class="listen__audio" preload="none" src="media/Черниговке.mp3"></audio>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer__inner">
